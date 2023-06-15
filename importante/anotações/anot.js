@@ -127,3 +127,15 @@ for (chave in juju){
 for (valor of juju.nome){
     console.log(valor)
 }
+
+
+//Try catch (except) funciona assim
+try{
+    console.log("eu te amooo")
+}catch(erro){
+    console.log("eu nao te amo")
+}
+// erro é literalmente o erro, onde você pode tratar dependendo do caso
+// throw (throw new Error mostra o erro bonitinho) é quando você cria um erro e exibe a mensagem, como se você modificasse
+// a mensagem de erro literamente
+// finally executa independentemente se entrar no  try ou no catch
