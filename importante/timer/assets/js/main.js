@@ -14,6 +14,12 @@ const timer = document.querySelector('.timer')
 let segundos = 0;
 let timerDois;
 
+//Para praticidade, 
+document.addEventListener('click', function(e){
+    console.log(e.target);
+})
+
+
 
 function iniciaRelogio() {
     timerDois = setInterval(function () {
@@ -23,10 +29,12 @@ function iniciaRelogio() {
 }
 
 pausar.addEventListener('click', function (event) {
+    timer.classList.add('pausado')
     clearInterval(timerDois)
 })
 
 iniciar.addEventListener('click', function (event) {
+    timer.classList.remove('pausado')
     iniciaRelogio();
 })
 

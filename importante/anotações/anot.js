@@ -75,9 +75,10 @@ juju.fala();
 
 // operação ternária
 const pontoUsuario = 500;
+
+// condicao ? 'valor se verdadeiro' : 'valor se falso'
 const nivelUsuario = pontoUsuario > 1000 ? "Vip" : "Normal";
 console.log(nivelUsuario)
-// condicao ? 'valor se verdadeiro' : 'valor se falso'
 
 
 // se existir cor, ela será igual a ela mesma, se não, será igual a azul

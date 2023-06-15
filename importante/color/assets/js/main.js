@@ -9,3 +9,5 @@ for (p of ps){
     p.style.borderRadius = "90px";
     p.style.color = '#fff';
 }
+
+
