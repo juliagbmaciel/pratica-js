@@ -81,7 +81,7 @@ document.addEventListener('click', function(e){
 de dentro de tarefas, estou selecionando todas as li's
 criei uma lista vazia para armazenar minhas tarefas
 iterando sobre a li que estou recebendo do meu tarefas, eu armazeno cada uma delas na
-variável tarefaTexto, em seguida substituo a palavra apagar por nada
+variável tarefaTexto, em seguida substituo a palavra 'apagar' por ''
 */
 //pra acessar localstorage = setinhas que ficam perto do console, aplicativo, armazenamento local
 function salvarTarefas(){

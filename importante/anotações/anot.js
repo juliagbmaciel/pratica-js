@@ -35,6 +35,9 @@ const juju = {
     }
 };
 
+
+
+
 //Atribuição via desestruturação em obj
 //Se nao existir vai atribuir a "nao existe"
 const { nome = "nao existe", idade } = juju;
@@ -60,7 +63,13 @@ const quadrado = n => n ** 2
 
 const linda = (nome, sobrenome) => nome + sobrenome
 
-
+/* Se eu mandar parametros pra minha função declarada com function, independente se eu declaro que recebi
+na função ou nao ele vai receber como arguments(um objeto chamado arguments)*/
+function testandoArguments(){
+    console.log(arguments)
+}
+ 
+testandoArguments('oiiiiiiiiiiiiiiiiiiiiiiiiiiii', 'oie2', 'teste')
 
 //Testes necessários
 
@@ -140,3 +149,4 @@ try{
 // throw (throw new Error mostra o erro bonitinho) é quando você cria um erro e exibe a mensagem, como se você modificasse
 // a mensagem de erro literamente
 // finally executa independentemente se entrar no  try ou no catch
+
