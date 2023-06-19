@@ -150,3 +150,80 @@ try{
 // a mensagem de erro literamente
 // finally executa independentemente se entrar no  try ou no catch
 
+// Closure, função que retorna outra função
+function criaMultiplicador (multiplicador) {
+    return function (n){
+        return n * multiplicador
+    };
+};
+
+const duplica =  criaMultiplicador(2)
+const triplica = criaMultiplicador(3)
+const quadriplica = criaMultiplicador(4)
+
+console.log(quadriplica(50000))
+
+
+// console.dir, mostra os escopos(entre outras coisas) que uma função tem acesso, entre outros... 
+
+
+/*
+function rand(min = 1000, max = 3000) {
+  const num = Math.random() * (max - min) +
+    min;
+  return Math.floor(num);
+}
+
+function f1(callback) {
+  setTimeout(function() {
+    console.log('f1');
+    //callback é basicamente quando enviamos uma função pra dentro da função, para executarmos ela, é só chamarmos callback()
+    //vamos executar algo depois de executar outra coisa
+    if (callback) callback();
+  }, rand());
+}
+
+function f2(callback) {
+  setTimeout(function() {
+    console.log('f2');
+    if (callback) callback();
+  }, rand());
+}
+
+function f3(callback) {
+  setTimeout(function() {
+    console.log('f3');
+    if (callback) callback();
+  }, rand());
+}
+
+f1(f1Callback);
+
+function f1Callback() {
+  f2(f2Callback);
+}
+
+function f2Callback() {
+  f3(f3Callback);
+}
+
+function f3Callback() {
+  console.log('Olá mundo!');
+}
+*/
+
+
+//função anonima executada imediatamente após criação
+(function(idade, peso, altura) {
+    const sobrenome = 'Miranda';
+    function criaNome(nome){
+        return nome + ' ' + sobrenome
+    }
+    function falanome(){
+        console.log(criaNome('Luiz'));
+    }
+
+    falanome();
+    
+})();
+
