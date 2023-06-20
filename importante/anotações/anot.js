@@ -213,7 +213,9 @@ function f3Callback() {
 */
 
 
-//função anonima executada imediatamente após criação
+//função anonima executada imediatamente após criação 
+//ta dando errado sla pq
+/*
 (function(idade, peso, altura) {
     const sobrenome = 'Miranda';
     function criaNome(nome){
@@ -226,4 +228,22 @@ function f3Callback() {
     falanome();
     
 })();
+*/
+
+//OUTRA FORMA DE CRIAR OBJETO PARECIDA COM JAVA
+// constructor function: 
+function Pessoa(nome, sobrenome){
+  const ID = 12345; //só existe dentro do método
+  this.nome = nome;
+  this.sobrenome = sobrenome;
+
+  this.metodo = function(){
+    console.log('sou um método')
+  };
+}
+
+
+//Tem que usar o new pra instanciar, igual no java
+const p1 = new Pessoa('julia', 'gabrielle')
+p1.metodo()
 
