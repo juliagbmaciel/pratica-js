@@ -1,5 +1,5 @@
 const data = new Date()
-
+console.log(data.getDay())
 //Operador ternário 
 //variavel   se dia for < 10        variavel = 0+dia   !    variavel = dia    
 const dia = data.getDate() < 10 ? '0' + data.getDate() : data.getDate()
