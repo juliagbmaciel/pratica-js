@@ -138,6 +138,12 @@ for (valor of juju.nome){
     console.log(valor)
 }
 
+//forEach só esta disponivel dentro de arrays
+const arrayteste = ['num', 'num1', 'num2','num3 i tal']
+
+arrayteste.forEach(function(valor, indice, arrayCompleto){
+  console.log(arrayCompleto[indice]);
+})
 
 //Try catch (except) funciona assim
 try{
@@ -247,3 +253,60 @@ function Pessoa(nome, sobrenome){
 const p1 = new Pessoa('julia', 'gabrielle')
 p1.metodo()
 
+const array = ['JULIA', 'GABRIELLE', 'MACIEL']
+
+const remov = array.splice(-2, array.length, 'gabrielleeeeee', 'teste')
+console.log(remov)
+console.log(array)
+
+//metodo concat concatena um array com outro, ou seja array.concat(array2)
+//ou usa os tres pontinhos pra pegar tudo ou o que sobrou de um array, exemplo array = [...a1, ...a2]
+
+
+//map com array, onde posso alterar os valores dos arrays caso precise
+
+const arraysss = [1, 2, 3, 4, 5, 6, 7, 8];
+const NumerosemDobro = arraysss.map(function(valor){
+  return `oláa, esse é o meu valor dobrado ${valor*2}`
+})
+console.log(NumerosemDobro)
+
+//ou com arrowfunction
+// NumerosemDobro = arraysss.map (valor => valor *2)
+
+//Mas como eu altero e/ou mostro apenas determinado valor de um =>Objeto<=??????
+const pessoas = [
+  {nome: 'julia', idade: 19 },
+  {nome: 'Juliano', idade: 20 },
+  {nome: 'Lucas', idade: 21 },
+  {nome: 'Alemanha', idade: 22 },
+  {nome: 'Joao da silva', idade: 23 },
+  {nome: 'Gabriel', idade: 24 },
+  {nome: 'Vetores', idade: 25 }
+]
+
+
+const nomes = pessoas.map(valor => valor.nome)
+const idades = pessoas.map(valor => valor.idade)
+//deletar algo do objeto
+const idadesSemNomes = pessoas.map(obj =>{
+  delete obj.nome
+  return obj
+})
+
+console.log(nomes, idades, idadesSemNomes)
+
+//adicionar chave dentro do objeto 
+
+const comIds = pessoas.map(function(obj, indice){
+  obj.id = indice
+  return obj;
+})
+console.log(comIds)
+
+//Fazendo isso estou alterando o objeto original, como faço para duplicar esse objeto sem mandar por referencia?
+
+const obj = pessoas.map(function(obj){
+  const newObj = {...obj}//estou mandando tudo o que tem dentro de objeto para o novo objeto
+  return newObj
+})
