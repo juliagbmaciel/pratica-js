@@ -310,3 +310,12 @@ const obj = pessoas.map(function(obj){
   const newObj = {...obj}//estou mandando tudo o que tem dentro de objeto para o novo objeto
   return newObj
 })
+
+
+//como funciona o reduce???
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const total = numeros.reduce(function(acumulador, valorAtual, indice, arrayOriginal){
+  return acumulador
+}, 0);//esse zero representa o numero inicial em que o acumulador estara
+//nesse caso, ele começa em zero, e toda vez que andar um index do array e retornar algo, nós
+//podemos atribuir algo a ele, como acumulador++, ou acumulador --, ou acumulador +=, é livre
