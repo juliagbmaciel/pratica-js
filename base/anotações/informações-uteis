@@ -1,0 +1,4 @@
+A programação assíncrona é uma técnica que permite que seu programa inicie uma tarefa potencialmente de longa duração e ainda seja 
+capaz de responder a outros eventos enquanto essa tarefa é executada, em vez de ter que esperar até que essa tarefa seja concluída.
+
+ou seja ASSINCRONO é o melhor e é isso que estou aprendendo agor
