@@ -1,33 +1,3 @@
-/* function rand(min, max){
-    min  *= 1000;
-    max *= 1000;
-    return Math.floor(Math.random() * (max - min) + min);
-} 
- 
- function esperaAi(msg, tempo){
-    return new Promise((resolve, reject) =>{
-        setTimeout(() => {
-            resolve(msg);
-        }, tempo)
-    } );
-
-
-
- }
-
-
- esperaAi('frase 1', rand(1, 3))
-    .then(resposta => {
-        console.log(resposta);
-        return esperaAi('Frase 2', rand (1, 3))
-    })
-    .then(resposta => {
-        console.log(resposta)
-    })
-    .catch() */
-
-
-
     const mypromise = new Promise((resolve, reject) =>{
         const name = 'Matheus'
 
@@ -65,10 +35,10 @@
     //Retorno do catch
 
 
-    /* Promises no caso ajuda na questao de API's, ele espera a resposta da api ou a execução de
+    /* Promises no caso ajuda na questao de API's (ou banco de dados), ele espera a resposta da api ou a execução de
     código tal, para realizar determinada função, vamos lá */
     const mypromise3 = new Promise((resolve, reject) =>{
-        //Aqui declarei que a variavel name recebe um valor
+        //Aqui declarei que a variavel name recebe um valor (ou hipoteticamente seria a conexao com o banco de dados ou a resposta da API)
         const name = 'MathJo~soeus'
 
 
